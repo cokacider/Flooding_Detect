@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Flooding</string>
+    <string name="sensorList">센서 리스트</string>
+    <string name="option">옵션</string>
+    <string name="action_register">등록</string>
+    <string name="label_sensorList">센서 목록</string>
+    <string name="appDeveloper_info">어플 및 개발자 정보</string>
+    <string name="sensorDetail">센서 정보</string>
+
+    <string name="serverAddress">http://164.125.68.162/</string>
+    <string name="refreshPhpFile">list.php</string>
+    <string name="registerPhpFile">register.php</string>
+    <string name="deletePhpFile">delete.php</string>
+    <string name="alarmPhpFile">alarm.php</string>
+    
+    <string name="TAG_RESULTS">result</string>
+    <string name="TAG_NAME">name</string>
+    <string name="TAG_LOCATION">location</string>
+    <string name="TAG_SERIAL">serial</string>
+    <string name="TAG_STATUS">status</string>
+</resources>

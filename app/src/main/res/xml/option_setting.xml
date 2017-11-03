@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="option_key">
+    <PreferenceCategory android:title="알람 설정">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="useAlarm"
+            android:summaryOff="침수시 알람이 울리지 않습니다"
+            android:summaryOn="침수시 알람이 울립니다"
+            android:title="침수시 알람" />
+        <ListPreference
+            android:defaultValue="5000"
+            android:dependency="useAlarm"
+            android:entries="@array/listAutoUpdateTime"
+            android:entryValues="@array/listAutoUpdateTime_values"
+            android:key="listAutoUpdateTime"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:title="침수시 알람 주기"/>
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="useAlarm"
+            android:key="useVibrate"
+            android:title="진동 사용" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="useAlarm"
+            android:key="useSound"
+            android:title="소리 사용" />
+        <RingtonePreference
+            android:defaultValue="content://settings/system/notfication_sound"
+            android:dependency="useSound"
+            android:key="alarm_ringtone"
+            android:ringtoneType="notification"
+            android:showSilent="false"
+            android:title="알람 소리" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="어플 및 개발자 정보">
+        <Preference
+            android:summary="어플 및 개발자 정보를 확인합니다"
+            android:title="어플 및 개발자 정보">
+            <intent
+                android:targetClass="com.example.heejun.flooding.InfoActivity"
+                android:targetPackage="com.example.heejun.flooding"/>
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>
